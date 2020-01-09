@@ -1,10 +1,10 @@
 import unittest
-from lru_cache import LRUCache
-
+#from lru_cache import LRUCache
+import lru_cache
 
 class CacheTests(unittest.TestCase):
     def setUp(self):
-        self.cache = LRUCache(3)
+        self.cache = lru_cache.LRUCache(3)
 
     def test_cache_overwrite_appropriately(self):
         self.cache.set('item1', 'a')

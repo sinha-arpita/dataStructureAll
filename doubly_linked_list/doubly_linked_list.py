@@ -60,6 +60,8 @@ class DoublyLinkedList:
             self.head.prev=new_node
             self.head= new_node
 
+        return new_node
+
     def remove_from_head(self):
         self.length -= 1
         if self.head is None:
@@ -116,8 +118,10 @@ class DoublyLinkedList:
           node.prev.next=None
 
         # make surrounding nodes point to each other
+
         prev_node= node.prev
         next_node= node.next
+        print(prev_node, next_node)
 
         if prev_node:
             prev_node.next=next_node
@@ -182,6 +186,15 @@ class DoublyLinkedList:
             max_val = current.value
           current = current.next
         return max_val
+
+
+
+    def printList(self):
+        head = self.head
+        while head:
+            print("Node value : ", head.value)
+            head = head.next
+
 
 
 
